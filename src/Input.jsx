@@ -18,10 +18,10 @@ class Input extends Component {
     return (
       <div>
         <form>
-          <label>
-            <input type='text' value={this.props.input} onChange={this.props.onChange}></input>
-          </label>
-          <input type='submit' value='Submit' onClick={this.props.submit}></input>
+
+          <input type='text' name='input' value={this.props.input} onChange={this.props.onChange}></input>
+          <button onClick={this.props.submit}>Submit</button>
+          {/* <input type='submit' value='Submit' onClick={this.props.submit}></input> */}
         </form>
       </div>
 

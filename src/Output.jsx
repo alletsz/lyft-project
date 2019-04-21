@@ -4,7 +4,7 @@ const Output = () => (
   <div>
 
 
-    <textarea></textarea>
+    <div>test</div>
 
 
   </div>
