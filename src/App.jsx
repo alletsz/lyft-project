@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
+
 import Input from './Input.jsx'
 import Output from './Output.jsx'
 import axios from 'axios';
+// import styles from '../styles/Input.css'
+
 // import headerPic from '../dist/lyft.jpg';
 // import pic from './NYR_FMF1.jpg'
 
@@ -35,12 +38,13 @@ class App extends Component {
     axios.post('//localhost:3001/test', input)
 
       .then((res) => {
-        // console.log(input)
-        // console.log(res.data)
+        console.log(input)
+        console.log(res.data)
         console.log(res.data.return_string)
+
+        // this.setState({ return_string: res.data.return_string })
         this.setState({ return_string: res.data.return_string })
-        // console.log(input)
-        // console.log(data.stringtocut)
+
 
       })
       .catch((error) => {
@@ -60,12 +64,13 @@ class App extends Component {
 
 
   render() {
+
     return (
       <div>
         <div>
           {/* <img src={headerPic} alt="header picture" /> */}
           <Input submit={this.submitHandler} onChange={this.handleChange} input={this.state.string_to_cut} />
-          <Output />
+          <Output alteredStr={this.state.return_string} />
         </div>
       </div>
     );

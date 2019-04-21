@@ -1,11 +1,9 @@
 import React from 'react';
 
-const Output = () => (
+const Output = (props) => (
   <div>
 
-
-    <div>test</div>
-
+    <div>{props.alteredStr}</div>
 
   </div>
 )
