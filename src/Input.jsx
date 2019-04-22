@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import styles from '../styles/Input.css'
+import styles from '../styles/Input.css'
+// import from '../dist/styles.css'
 
 class Input extends Component {
   constructor(props) {
@@ -18,12 +19,14 @@ class Input extends Component {
   render() {
     return (
       <div>
+        <div className={styles.formContainer}>
         <form>
 
-          <input type='text' name='input' value={this.props.input} onChange={this.props.onChange}></input>
-          <button onClick={this.props.submit}>Submit</button>
+          <input className={styles.inputField} type='text' name='input' value={this.props.input} onChange={this.props.onChange}></input>
+          <button className={styles.submitButton} onClick={this.props.submit}>Submit</button>
           {/* <input type='submit' value='Submit' onClick={this.props.submit}></input> */}
         </form>
+        </div>
       </div>
 
     );

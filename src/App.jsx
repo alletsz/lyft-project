@@ -4,10 +4,9 @@ import React, { Component } from 'react';
 import Input from './Input.jsx'
 import Output from './Output.jsx'
 import axios from 'axios';
-// import styles from '../styles/Input.css'
+import styles from '../styles/App.css'
 
 // import headerPic from '../dist/lyft.jpg';
-// import pic from './NYR_FMF1.jpg'
 
 class App extends Component {
   constructor(props) {
@@ -41,8 +40,9 @@ class App extends Component {
         console.log(input)
         console.log(res.data)
         console.log(res.data.return_string)
+        // const updatedString = res.data.return_string
+        // console.log(updatedString)
 
-        // this.setState({ return_string: res.data.return_string })
         this.setState({ return_string: res.data.return_string })
 
 
@@ -67,7 +67,7 @@ class App extends Component {
 
     return (
       <div>
-        <div>
+        <div className={styles.container}>
           {/* <img src={headerPic} alt="header picture" /> */}
           <Input submit={this.submitHandler} onChange={this.handleChange} input={this.state.string_to_cut} />
           <Output alteredStr={this.state.return_string} />

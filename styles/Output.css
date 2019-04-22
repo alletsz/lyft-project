@@ -1,0 +1,12 @@
+.outputContainer {
+  display: block;
+  text-align: center;
+}
+
+.output {
+  margin-top: 40px;
+  font-size: 34px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: #352384;
+}
