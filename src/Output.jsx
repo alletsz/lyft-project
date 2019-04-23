@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Output.css'
+import styles from './styles/Output.css'
 
 const Output = (props) => (
   <div>

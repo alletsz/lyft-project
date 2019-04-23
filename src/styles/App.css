@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrap {
+ position: relative;
+ height: 570px;
+ border-bottom: 3px solid #e8e2ed;
+ overflow: hidden;
+ margin-bottom: 100px;
+}
+
+.headerPic {
+  
+ 
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  position: absolute;
+  bottom:-15px;
+  
+} 

@@ -1,6 +1,7 @@
 .outputContainer {
   display: block;
   text-align: center;
+  margin-bottom: 500px;
 }
 
 .output {
