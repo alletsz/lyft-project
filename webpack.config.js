@@ -1,7 +1,42 @@
+const path = require('path');
+// const webpack = require('webpack');
+
 module.exports = {
-  entry: './src/index.js',
+  // entry: './src/index.js',
+  entry: `${__dirname}/src/index.js`,
+  output: {
+    
+    path: path.resolve(__dirname, './dist'),
+    filename: 'bundle.js',
+    // path: __dirname + '/dist',
+    // publicPath: '/',
+    // filename: 'bundle.js'
+  },
   module: {
     rules: [
+      // {
+      //   test: /\.css$/,
+      //   use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
+      // },
+      {
+        test: /\.css$/,
+        loader: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
+      },
+      
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+         use: [
+          'file-loader'
+        ]
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -12,21 +47,14 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ]
+      
+    ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.css']
+    extensions: ['*', '.js', '.jsx']
   },
-  output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
-  devServer: {
-    contentBase: './dist'
-  }
+  
+  // devServer: {
+  //   contentBase: './dist'
+  // }
 };
